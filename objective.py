@@ -52,7 +52,7 @@ class Objective(BaseObjective):
     sampling_strategy = "run_once"
 
     # Minimal config for ``benchopt test``
-    test_dataset_name = "ecg"
+    test_dataset_name = "monash"
     test_config = {"dataset": {"debug": True}}
 
     # ------------------------------------------------------------------

@@ -27,6 +27,7 @@ seasonality : int  (seasonal period used for MASE)
 import numpy as np
 from benchopt import BaseDataset
 
+from aeon.datasets import load_forecasting
 from benchmark_utils.windowing import make_forecasting_splits
 
 
@@ -75,7 +76,6 @@ class Dataset(BaseDataset):
     }
 
     def get_data(self):
-        from aeon.datasets import load_forecasting
 
         df, meta = load_forecasting(self.dataset_name, return_metadata=True)
         # df columns: series_name, start_timestamp, series_value
